@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/90976bdb22.js" crossorigin="anonymous"></script>
+<style>
+   
+   body{
+        background-color: rgb(0, 0, 0);
+    }
+    
+</style>
+
+</head>
+<body>
+
+        <div class="container">
+            <div class="navbar">
+                <img src="picture/logo.png" alt="logo">
+                <ul id="sidemenu">
+                    <li><a href="forside.html">Forside</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="mig.html">Om mig</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </div>
+    </div>
+
+<div id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="portfolio-col-1">
+                <img src="picture/musik.png" alt="musik">
+            </div>
+            <div class="portfolio-col-2">
+                <h1 class="sub-title">PORTFOLIO</h1>
+                <p class="musik-text">I musik branchen går 
+                jeg under navnet Milojensen og Miloweluvu. <br> 
+                Min fritid bruger jeg meget af min energi 
+                på, at lave musik til kunstnere over hele verden. 
+                <br> Jeg elsker at være kreativ og musik er en af 
+                formerne jeg bruger til at udtrykke mig på.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Beats')">Beats</p>
+                    <p class="tab-links" onclick="opentab('Credits')">Credits</p>
+                </div>
+                <div class="tab-contents active-tab" id="Beats">
+                    <ul>
+                        <audio controls>
+                            <source src="music/passion.ogg" type="audio/ogg">
+                            <source src="music/passion.mp3" type="audio/mpeg">
+                          </audio>
+                          <audio controls>
+                            <source src="music/near-me.ogg" type="audio/ogg">
+                            <source src="music/near-me.mp3" type="audio/mpeg">
+                          </audio>
+                          <audio controls>
+                            <source src="music/sirup.ogg" type="audio/ogg">
+                            <source src="music/sirup.mp3" type="audio/mpeg">
+                          </audio>
+                          <audio controls>
+                            <source src="music/escape.ogg" type="audio/ogg">
+                            <source src="music/escape.mp3" type="audio/mpeg">
+                          </audio>
+                          <audio controls>
+                            <source src="music/roulette.ogg" type="audio/ogg">
+                            <source src="music/roulette.mp3" type="audio/mpeg">
+                          </audio>
+                          <audio controls>
+                            <source src="music/starlight.ogg" type="audio/ogg">
+                            <source src="music/starlight.mp3" type="audio/mpeg">
+                          </audio>
+                          <audio controls>
+                            <source src="music/alien.ogg" type="audio/ogg">
+                            <source src="music/alien.mp3" type="audio/mpeg">
+                          </audio>
+                          <audio controls>
+                            <source src="music/immortal.ogg" type="audio/ogg">
+                            <source src="music/immortal.mp3" type="audio/mpeg">
+                          </audio>
+                          <audio controls>
+                            <source src="music/romance.ogg" type="audio/ogg">
+                            <source src="music/romance.mp3" type="audio/mpeg">
+                          </audio>
+                          <audio controls>
+                            <source src="music/marry.ogg" type="audio/ogg">
+                            <source src="music/marry.mp3" type="audio/mpeg">
+                          </audio>
+                          <audio controls>
+                            <source src="music/sinister.ogg" type="audio/ogg">
+                            <source src="music/sinister.mp3" type="audio/mpeg">
+                          </audio>
+                          <audio controls>
+                            <source src="music/sunshine.ogg" type="audio/ogg">
+                            <source src="music/sunshine.mp3" type="audio/mpeg">
+                          </audio>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Credits">
+                    <ul>
+                        <li><span>Ksuave - Lotion</span></li>
+                        <li><span>Rodney - Role Model</span></li>
+                        <li><span>Nosgov - Trust</span></li>
+                        <li><span>Fenix Darko - Nirvana</span></li>
+                        <li><span>Blxty - Kms</span></li>
+                        <li><span>Datzjayden - Passion</span></li>
+                        <li><span>Kash Kyle - Work</span></li>
+                        <li><span>Preme - Sinner</span></li>
+                        <li><span>Samt mange andre!</span></li>
+                    </ul>             
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>

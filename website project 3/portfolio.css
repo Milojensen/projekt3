@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    color: #ffffff;
+}
+
+.container{
+    padding: 10px 2%;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.6s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.portfolio{
+    padding: 80px 0;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.portfolio-col-1{
+    flex-basis: 35%;
+    padding: 10px 8%;
+}
+
+.portfolio-col-1 img{
+    width: 160%;
+    border-radius: 15px;
+}
+
+.portfolio-col-2{
+    flex-basis: 60%;
+    padding: 0px 8%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.musik-text{
+    font-size: 20px;
+    padding: 5px
+}
+
+.tab-titles{
+    display: flex;
+    margin: 10px 0;
+    padding: 7px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.6s;
+}
+
+.tab-links.active-link::after{
+    width: 100%;
+}
+
+.tab-contents ul{
+    list-style: none;
+    margin: 10px 0;
+    padding: 7px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+.tab-contents-active-tab{
+    width: 100px;
+}
+
+.navbar .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 390px){
+    .navbar .fas{
+        display: block;
+        font-size: 25px;
+    }
+    .navbar ul{
+        background: #1b1b1b;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    .navbar ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    .navbar ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 30px;
+        padding: 4px;
+    }
+    .musik-text{
+        font-size: 15px;
+    }
+    .tab-links{
+        font-size: 15px;
+        margin-right: 20px;
+    }
+    .portfolio-col-1, .portfolio-col-2{
+        flex-basis: 100%;
+    }
+    .prod{
+        width: 380px;
+    }
+    .portfolio-col-1 img{
+        width: 100%;
+    }
+    .tab-contents ul li{
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    color: #ffffff;
+}
+
+.container{
+    padding: 10px 2%;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.6s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mig-col-1{
+    flex-basis: 35%;
+    padding: 10px 8%;
+}
+
+.mig-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.mig-col-2{
+    flex-basis: 65%;
+    padding-right: 8%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.mig-text{
+    font-size: 20px;
+    padding: 5px;
+    color: #ffffff;
+}
+
+.navbar .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 390px){
+    .navbar .fas{
+        display: block;
+        font-size: 25px;
+    }
+    .navbar ul{
+        background: #1b1b1b;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    .navbar ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    .navbar ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 30px; 
+        padding: 10px 8%;        
+    }
+    .mig-text{
+        font-size: 15px;
+        padding: 10px 8%;
+    }
+    .mig-col-1, .mig-col-2{
+        flex-basis: 100%;
+    }
+}
